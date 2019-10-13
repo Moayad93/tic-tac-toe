@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+/* UNIVERSAL SELECTORS */
+
+* {
+  /* Reset margins */
+  margin: 0;
+  padding: 0;
+
+  /* Add smoothness to all elements */
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+
+  /* Set border-box for box-sizing for margin and padding purposes */
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  /* No annoying repeat images for backgrounds */
+  background-repeat: no-repeat;
+
+  /* Set position as relative yet change it to whatever we like afterwards */
+  position: relative;
+
+  /* Vertical align all elements by default */
+  vertical-align: middle;
+}
+
+/* GENERAL SELECTORS */
+
+html {
+  font: calc(1rem + 1vw) 'Roboto', sans-serif;
+}
+
+body {
+  /* font: calc(0.5rem + 0.5vw)/25px 'Roboto', sans-serif; */
+}
+
+a {
+  text-decoration: none;
+}
+
+/* TEST SOME SELECTORS */
+
+a:hover {
+  transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+::selection {
+  background-color: hsla(120, 0%, 50%, 0.5);
+  color: #f1f1f1;
+}
+
+/* p {
+  max-width: 65ch;
+} */
