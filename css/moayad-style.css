@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito|Roboto|Montserrat&display=swap');
 
 /* UNIVERSAL SELECTORS */
 
@@ -8,16 +8,17 @@
   padding: 0;
 
   /* Add smoothness to all elements */
-  transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 
   /* Set border-box for box-sizing for margin and padding purposes */
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+  /* Let box-sizing be inherited from html: This makes it easier to change box-sizing in plugins or other components that leverage other behavior. */
+  box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
 
   /* No annoying repeat images for backgrounds */
   background-repeat: no-repeat;
@@ -29,18 +30,49 @@
   vertical-align: middle;
 }
 
+  *::before,
+  *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+
 /* GENERAL SELECTORS */
 
 html {
-  font: calc(1rem + 1vw) 'Roboto', sans-serif;
+  font: calc(1rem + 1vw) 'Montserrat', sans-serif;
+  box-sizing: border-box;
 }
 
 body {
   /* font: calc(0.5rem + 0.5vw)/25px 'Roboto', sans-serif; */
+  place-items: center center;
 }
 
 a {
   text-decoration: none;
+}
+
+/* Use unset Instead of Resetting All Properties */
+button {
+  all: unset;
+  padding: 0.5em 1.5em;
+  border-radius: 5px;
+  color: #FAFAFA;
+  box-shadow: 0 5px 0 0 rgb(112, 112, 112);
+  font-size: 0.5rem;
+  background-color: rgb(128, 128, 128);
+  transition: all 0.01s ease;
+}
+
+button:hover {
+background-color: rgb(144, 144, 144);
+cursor: pointer;
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: none;
 }
 
 /* TEST SOME SELECTORS */
@@ -59,4 +91,37 @@ a:hover {
 
 /* p {
   max-width: 65ch;
+} */
+
+/* Use :not() to Apply/Unapply Borders on Navigation
+Instead of putting on the border... */
+
+/* add border */
+.nav li {
+  border-right: 1px solid #666;
+}
+
+/* ...and then taking it off the last element... */
+/* remove border */
+.nav li:last-child {
+  border-right: none;
+}
+
+/* ...use the :not() pseudo-class to only apply to the elements you want: */
+.nav li:not(:last-child) {
+  border-right: 1px solid #666;
+}
+
+/* Set :focus for Form Elements */
+/* Sighted keyboard users rely on focus to determine where keyboard events go in the page. Make focus for form elements stand out and consistent then a browser's default implementation: */
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: none;
+  /* outline: rgba(0, 0, 0, 0.1) solid 2px; */
+}
+
+/* ul > li:not(:last-child)::after {
+  content: ",";
 } */

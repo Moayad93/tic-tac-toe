@@ -1,60 +1,201 @@
+html {
+  width: 100%;
+  height: 100vh;
+}
+
 body {
-    background-color: #FAFAFA;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+  width: 100%;
+  height: 100%;
+
+  background-color: #212121;
+  color: #FAFAFA;
+
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+#welcome {
+  width: 100%;
+  height: 100vh;
+
+  position: absolute;
+  z-index: 9999999;
+  background-color: #212121;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#welcome div {
+  display: none;
+}
+
+#welcome p {
+  font-weight: 1;
+  font-size: 0.75rem;
+  color: #808080;
+}
+
+#welcome h1 {
+  font-weight: 900;
+  color: #FAFAFA;
+}
+
+#wrapper {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 header {
-    background-color: #FFEBEE;
-    /* We want the header to have a static height,
+  background-color: #212121;
+  width: 100%;
+  padding: 1em;
+  /* We want the header to have a static height,
    it will always take up just as much space as it needs.  */
-    /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
-    flex: 0 0 auto;
+  /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 0 0 auto;
 }
 
-header h1 {
-    text-align: center;
+#scorePanel {
+  font-size: 0.5rem;
+}
+
+#xScorePanel {
+  float: left;
+  margin-left: 10em;
+}
+
+#oScorePanel {
+  float: right;
+  margin-right: 10em;
+}
+
+#turnMessage {
+  text-align: center;
+  font-size: 0.70rem;
+  display: none;
 }
 
 main {
-    background-color: #E8F5E9;
-    /* By setting flex-grow to 1, the main content will take up all of the remaining space on the page.
+  background-color: #263238;
+  width: 100%;
+  padding: 1em;
+  /* By setting flex-grow to 1, the main content will take up all of the remaining space on the page.
    The other elements have flex-grow: 0 and won't contest the free space. */
-    /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
-    flex: 1 0 auto;
+  /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 1 0 auto;
+
+}
+
+button {
+  float: left;
+  position: fixed;
 }
 
 table {
-    width: 50%;
-    height: 50%;
-    margin: 0 auto;
+  border: none;
+  border-collapse: collapse;
+  /* width: 50%;
+  height: 50%; */
+  margin: 0 auto;
+  font-family: 'Nunito', sans-serif;
 }
 
 td {
-    border: 1px solid #333;
-    text-align: center;
-    width: 10vw;
-    height: 10vw;
+  border: 1px solid #808080;
+  text-align: center;
+  width: 10vw;
+  height: 10vw;
+  font-size: 6vw;
 }
 
 td:hover {
-    transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -o-transform: scale(1.1);
+  z-index: 9999;
+  background-color: rgb(69, 90, 100);
+  box-shadow: 0 0 0.1em #333;
+  border: none;
+  cursor: pointer;
+}
+
+tr:first-child td {
+  border-top: none;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr td:first-child {
+  border-left: none;
+}
+
+tr td:last-child {
+  border-right: none;
+}
+
+#winMessage {
+  text-align: center;
+  font-size: 0.75rem;
+  margin: 5em;
+  /* visibility: hidden; */
+  display: none;
 }
 
 footer {
-    background-color: #E3F2FD;
-    /* width:100%; */
-    /* Like the header, the footer will have a static height - it shouldn't grow or shrink.  */
-    /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
-    flex: 0 0 auto;
+  background-color: #212121;
+  width: 100%;
+  padding: 1em;
+  /* Like the header, the footer will have a static height - it shouldn't grow or shrink.  */
+  /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 0 0 auto;
 }
 
-footer p {
+  footer p {
     text-align: center;
-    font-size: 0.5rem;
-}
+    font-size: 0.4rem;
+  }
+
+  footer span {
+    color: #EF5350;
+  }
+
+  /* Change theme */
+  #switcher {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+  }
+
+  #switcher li:first-child {
+    margin-right: 0.25em;
+  }
+
+  #switcher li {
+    text-align: center;
+    display: inline-block;
+    width: 0.9em;
+    height: 0.9em;
+    margin-bottom: 0.5em;
+    border: 1.5px solid #808080;
+    cursor: pointer;
+  }
+
+  #blueGrayButton {
+    background-color: #263238 !important;
+    color: #263238 !important;
+  }
+
+  #offWhiteButton {
+    background-color: #FAFAFA !important;
+    color: #FAFAFA !important;
+  }
