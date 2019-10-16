@@ -94,9 +94,16 @@ main {
 
 }
 
-button {
-  float: left;
-  position: fixed;
+#buttons {
+
+}
+
+#reset {
+  text-align: center;
+}
+
+#newGame{
+text-align: center;
 }
 
 table {
@@ -118,7 +125,10 @@ td {
 
 td:hover {
   z-index: 9999;
-  background-color: rgb(69, 90, 100);
+  /* background-color: #455A64; */
+  background-color: #78909C;
+  /* background-color: #607D8B; */
+
   box-shadow: 0 0 0.1em #333;
   border: none;
   cursor: pointer;
@@ -142,9 +152,7 @@ tr td:last-child {
 
 #winMessage {
   text-align: center;
-  font-size: 0.75rem;
-  margin: 5em;
-  /* visibility: hidden; */
+  font-size: 0.70rem;
   display: none;
 }
 
