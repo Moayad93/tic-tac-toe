@@ -104,7 +104,7 @@ main {
 }
 
 #newGame{
-text-align: center;
+  text-align: center;
 }
 
 table {
@@ -127,8 +127,8 @@ td {
 td:hover {
   z-index: 9999;
   /* background-color: #455A64; */
-  background-color: #78909C;
-  /* background-color: #607D8B; */
+  /* background-color: #78909C; */
+  background-color: #607D8B;
 
   box-shadow: 0 0 0.1em #333;
   border: none;

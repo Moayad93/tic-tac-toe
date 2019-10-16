@@ -87,6 +87,8 @@ $(document).ready(function () {
         }
       } else if ($boxText.length === 9) {
         console.log('__________It\'s a tie!');
+        $winMessage.fadeIn('slow');
+        $winMessage.text('It\'s a tie!');
         tdReset();
         return;
       }
