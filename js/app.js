@@ -52,7 +52,13 @@ $(document).ready(function () {
     console.log('validation');
     for (let i = 1; i < 4; i++) {
       console.log('For loop');
-      if (
+      if ($boxText.length === 9) {
+        console.log('__________It\'s a tie!');
+        $winMessage.fadeIn('slow');
+        $winMessage.text('It\'s a tie!');
+        tdReset();
+        return;
+      } else if (
         // Check winner horizontally
         (eval("$row" + i + "_col1.text()") === 'X' && eval("$row" + i + "_col2.text()") === 'X' && eval("$row" + i + "_col3.text()") === 'X') ||
         (eval("$row" + i + "_col1.text()") === 'O' && eval("$row" + i + "_col2.text()") === 'O' && eval("$row" + i + "_col3.text()") === 'O') ||
@@ -85,12 +91,6 @@ $(document).ready(function () {
           tdReset();
           return;
         }
-      } else if ($boxText.length === 9) {
-        console.log('__________It\'s a tie!');
-        $winMessage.fadeIn('slow');
-        $winMessage.text('It\'s a tie!');
-        tdReset();
-        return;
       }
     }
     // setTimeout(switchTurn, 10);
