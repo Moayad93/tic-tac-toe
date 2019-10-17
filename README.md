@@ -10,11 +10,29 @@
 
 Tic-Tac-Toe
 ======
+
 Demo
 ------
+
 Site
 ------
+
 ### Landing Page
+
 ### Game Board
+
 Usage
+------
+
+### Development
+
+### Bug / Feature Request
+
+Built with
+------
+
+To-do
+------
+
+Author
 ------
