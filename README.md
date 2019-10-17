@@ -10,11 +10,11 @@
 
 Tic-Tac-Toe
 ======
-
+Demo
+------
 Site
 ------
-
 ### Landing Page
-
 ### Game Board
-
+Usage
+------
