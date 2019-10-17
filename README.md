@@ -18,7 +18,7 @@ Site
 ------
 
 ### Landing Page
-
+![Landing Page](landing-page.png)
 ### Game Board
 
 Usage
