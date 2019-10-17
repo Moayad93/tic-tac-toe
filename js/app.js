@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  // Declare a variable for "td"s i.e. boxes class and variables for each "td"'s id
+  // Declare const variables
   const
     $body         = $('body'),
     $header       = $('header'),
@@ -23,7 +23,7 @@ $(document).ready(function () {
     $row3_col3    = $('#col-3-3'),
     $footer       = $('footer');
 
-  // Declare a variable for player's turn xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  // Declare let variables
   let
     $isXPlayerTurn    = true,
     $xPlayerScore     = 0,
@@ -45,10 +45,9 @@ $(document).ready(function () {
 
   // Validation function
   const validation = function () {
-    console.log('validation');
+    // console.log('validation');
     console.log($('.box').text().length);
     for (let i = 1; i < 4; i++) {
-      console.log('__For loop');
       if (
         // Check winner horizontally
         (eval("$row" + i + "_col1.text()") === 'X' && eval("$row" + i + "_col2.text()") === 'X' && eval("$row" + i + "_col3.text()") === 'X') ||
@@ -62,13 +61,12 @@ $(document).ready(function () {
         ($row1_col1.text() === 'X' && $row2_col2.text() === 'X' && $row3_col3.text() === 'X') ||
         ($row1_col1.text() === 'O' && $row2_col2.text() === 'O' && $row3_col3.text() === 'O') ||
         ($row1_col3.text() === 'X' && $row2_col2.text() === 'X' && $row3_col1.text() === 'X') ||
-        ($row1_col3.text() === 'O' && $row2_col2.text() === 'O' && $row3_col1.text() === 'O')
-      ) {
+        ($row1_col3.text() === 'O' && $row2_col2.text() === 'O' && $row3_col1.text() === 'O')) {
 
         if ($isXPlayerTurn) {
           $xPlayerScore += 1;
           $xPlayerScoreText.text($xPlayerScore);
-          console.log($xPlayerScore, '__________First player won!');
+          // console.log($xPlayerScore, 'First player won!');
           $winMessage.fadeIn('slow');
           $winMessage.text('X Player Won!');
           tdReset();
@@ -76,36 +74,35 @@ $(document).ready(function () {
         } else {
           $oPlayerScore += 1;
           $oPlayerScoreText.text($oPlayerScore);
-          console.log($oPlayerScore, '__________Second player won!');
+          // console.log($oPlayerScore, 'Second player won!');
           $winMessage.fadeIn('slow');
           $winMessage.text('O Player Won!');
           tdReset();
           return;
         }
+
       } else if ($('.box').text().length === 9) {
-        console.log('__________It\'s a tie!');
+        // console.log('It\'s a tie!');
         $winMessage.fadeIn('slow');
         $winMessage.text('It\'s a tie!');
         tdReset();
         return;
       }
     }
+    // Switch turns
     setTimeout(switchTurn, 10);
-    // switchTurn();
   }
 
   // Change turn
   const switchTurn = function () {
-    console.log('switchTurn');
-    console.log('___________switchTurn___________');
+    // console.log('switchTurn');
     $isXPlayerTurn = !$isXPlayerTurn;
   }
 
   // Click event
   const tdClick = function () {
-    console.log('\\\\\\\\');
+    // console.log("tdClick");
 
-    console.log("Click Works Man!");
     $winMessage.css('display', 'none');
 
     ($isXPlayerTurn) ?
@@ -119,10 +116,6 @@ $(document).ready(function () {
     console.log($clickedBoxes);
 
     validation();
-
-    // Magic line to swith turns
-    // setTimeout(switchTurn, 0);
-
   }
 
   $box.click(tdClick);
@@ -147,22 +140,17 @@ $(document).ready(function () {
 
   // Reset event
   const tdReset = function () {
-    console.log('tdReset');
-    console.log('____________tdReset__________');
+    // console.log('tdReset');
 
     $box.each(function () {
-      console.log('entered box each');
-
+      // console.log('entered box each');
       if ($(this).text() === '') {
         console.log('checked boxed by include');
         $(this).unbind();
       }
-
     });
 
     $box.text('');
-
-    // switchTurn();
     $isXPlayerTurn = true;
     $turnMessage.text('');
     $box.click(tdClick);
@@ -172,7 +160,7 @@ $(document).ready(function () {
 
   $reset.click(tdReset);
 
-  // New game
+  // Start New game
   const newGameButton = function() {
     $('#xScoreText').text('');
     $('#oScoreText').text('');
@@ -199,7 +187,6 @@ $(document).ready(function () {
     $body.css('color', '#212121');
     $header.css('background-color', '#FAFAFA');
     $main.css('background-color', '#ECEFF1');
-    // $main.css('background-color', '#CFD8DC');
     $footer.css('background-color', '#FAFAFA');
   }
 
