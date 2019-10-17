@@ -24,25 +24,26 @@ body {
   background-color: #212121;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
-#welcome div {
-  display: none;
-}
+  #welcome div {
+    display: none;
+  }
 
-#welcome p {
-  font-weight: 1;
-  font-size: 0.75rem;
-  color: #808080;
-}
+  #welcome p {
+    font-weight: 1;
+    font-size: 0.75rem;
+    color: #808080;
+  }
 
-#welcome h1 {
-  font-weight: 900;
-  color: #FAFAFA;
-}
+  #welcome h1 {
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: #FAFAFA;
+  }
 
 #wrapper {
   width: 100%;
@@ -67,21 +68,27 @@ header {
   font-size: 0.5rem;
 }
 
-#xScorePanel {
-  float: left;
-  margin-left: 10em;
-}
+  #xScorePanel {
+    float: left;
+    margin-left: 10em;
+  }
 
-#oScorePanel {
-  float: right;
-  margin-right: 10em;
-}
+  #oScorePanel {
+    float: right;
+    margin-right: 10em;
+  }
 
-#turnMessage {
-  text-align: center;
-  font-size: 0.70rem;
-  display: none;
-}
+  #turnMessage {
+    text-align: center;
+    font-size: 0.70rem;
+    display: none;
+  }
+
+  #winMessage {
+    text-align: center;
+    font-size: 0.70rem;
+    display: none;
+  }
 
 main {
   background-color: #263238;
@@ -94,68 +101,62 @@ main {
 
 }
 
-#buttons {
-  text-align: center;
-  margin-bottom: 1em;
-}
+  #buttons {
+    text-align: center;
+    margin-bottom: 1em;
+  }
 
-#reset {
-  text-align: center;
-}
+  #reset {
+    text-align: center;
+  }
 
-#newGame{
-  text-align: center;
-}
+  #newGame{
+    text-align: center;
+  }
 
-table {
-  border: none;
-  border-collapse: collapse;
-  /* width: 50%;
-  height: 50%; */
-  margin: 0 auto;
-  font-family: 'Nunito', sans-serif;
-}
+  table {
+    border: none;
+    border-collapse: collapse;
+    /* width: 50%;
+    height: 50%; */
+    margin: 0 auto;
+    font-family: 'Nunito', sans-serif;
+  }
 
-td {
-  border: 1px solid #808080;
-  text-align: center;
-  width: 10vw;
-  height: 10vw;
-  font-size: 6vw;
-}
+  td {
+    border: 1px solid #808080;
+    text-align: center;
+    width: 10vw;
+    height: 10vw;
+    font-size: 6vw;
+  }
 
-td:hover {
-  z-index: 9999;
-  /* background-color: #455A64; */
-  /* background-color: #78909C; */
-  background-color: #607D8B;
+  td:hover {
+    z-index: 9999;
+    /* background-color: #455A64; */
+    /* background-color: #78909C; */
+    /* background-color: #607D8B; */
+    background-color: #808080;
+    box-shadow: 0 0 0.1em #333;
+    border: 1px solid #808080;
+    cursor: pointer;
+  }
 
-  box-shadow: 0 0 0.1em #333;
-  border: none;
-  cursor: pointer;
-}
+  tr:first-child td {
+    border-top: none;
+  }
 
-tr:first-child td {
-  border-top: none;
-}
+  tr:last-child td {
+    border-bottom: none;
+  }
 
-tr:last-child td {
-  border-bottom: none;
-}
+  tr td:first-child {
+    border-left: none;
+  }
 
-tr td:first-child {
-  border-left: none;
-}
-
-tr td:last-child {
-  border-right: none;
-}
-
-#winMessage {
-  text-align: center;
-  font-size: 0.70rem;
-  display: none;
-}
+  tr td:last-child {
+    border-right: none;
+  }
 
 footer {
   background-color: #212121;
@@ -182,7 +183,7 @@ footer {
     padding: 0;
     overflow: hidden;
     width: 100%;
-    text-align: center;
+    /* text-align: center; */
   }
 
   #switcher li:first-child {
