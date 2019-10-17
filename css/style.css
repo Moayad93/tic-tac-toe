@@ -1,3 +1,4 @@
+/* Force the page to fill the height of the browser window */
 html {
   width: 100%;
   height: 100vh;
@@ -15,6 +16,7 @@ body {
   overflow: auto;
 }
 
+/* Landing page i.e. welcoming div */
 #welcome {
   width: 100%;
   height: 100vh;
@@ -29,6 +31,7 @@ body {
   align-items: center;
 }
 
+  /* Hide the div and show it via JQuery */
   #welcome div {
     display: none;
   }
@@ -45,9 +48,9 @@ body {
     color: #FAFAFA;
   }
 
+/* The container for the whole site */
 #wrapper {
   width: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,26 +67,31 @@ header {
   flex: 0 0 auto;
 }
 
+/* Score panel container */
 #scorePanel {
   font-size: 0.5rem;
 }
 
+  /* X player score panel */
   #xScorePanel {
     float: left;
     margin-left: 10em;
   }
 
+    /* O player score panel */
   #oScorePanel {
     float: right;
     margin-right: 10em;
   }
 
+  /* Message to show who's the next */
   #turnMessage {
     text-align: center;
     font-size: 0.70rem;
     display: none;
   }
 
+    /* Message to show who's the winner */
   #winMessage {
     text-align: center;
     font-size: 0.70rem;
@@ -101,28 +109,31 @@ main {
 
 }
 
+  /* Buttons container */
   #buttons {
     text-align: center;
     margin-bottom: 1em;
   }
 
+  /* Reset button */
   #reset {
     text-align: center;
   }
 
+  /* New game button */
   #newGame{
     text-align: center;
   }
 
+  /* Make the table cells equally square */
   table {
     border: none;
     border-collapse: collapse;
-    /* width: 50%;
-    height: 50%; */
     margin: 0 auto;
     font-family: 'Nunito', sans-serif;
   }
 
+  /* remove tds borders */
   td {
     border: 1px solid #808080;
     text-align: center;
@@ -133,9 +144,6 @@ main {
 
   td:hover {
     z-index: 9999;
-    /* background-color: #455A64; */
-    /* background-color: #78909C; */
-    /* background-color: #607D8B; */
     background-color: #808080;
     box-shadow: 0 0 0.1em #333;
     border: 1px solid #808080;
@@ -176,14 +184,13 @@ footer {
     color: #EF5350;
   }
 
-  /* Change theme */
+  /* Change theme buttons */
   #switcher {
     list-style: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     width: 100%;
-    /* text-align: center; */
   }
 
   #switcher li:first-child {
