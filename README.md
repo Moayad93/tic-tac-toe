@@ -20,23 +20,24 @@ Site
 
 ### Landing Page
 ![Landing Page](landing-page.png)
+
 ### Game Board
 ![Game Board](game-board.png)
+
 Usage
 ------
 
 ### Development
-Want to contribute? Great!
 
-To fix a bug or enhance an existing module, follow these steps:
+To fix a bug or improve the game features, follow the next steps:
 
 * Fork the repo
-* Create a new branch (git checkout -b improve-feature)
-* Make the appropriate changes in the files
-* Add changes to reflect the changes made
-* Commit your changes (git commit -am 'Improve feature')
-* Push to the branch (git push origin improve-feature)
-* Create a Pull Request
+* Create a new branch `git checkout -b fix-bugs` or `git checkout -b improve-features`
+* Do the needed changes to the files
+* Add your changes `add .` to add all the files or `add <your file name>` to add single file
+* Commit your changes `git commit -m "Fix bugs"` or `"Improve features"`
+* Push to the branch `git push origin fix-bugs` or `"improve-features"`
+* Create a New Pull Request
 
 ### Bug / Feature Request
 If there is a bug, open an issue here by including your issue with explanation.
