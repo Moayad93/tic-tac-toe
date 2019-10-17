@@ -14,6 +14,7 @@ Tic-Tac-Toe
 Demo
 ------
 Working live demo: https://moayad93.github.io/tic-tac-toe/
+
 Site
 ------
 
@@ -38,12 +39,20 @@ To fix a bug or enhance an existing module, follow these steps:
 * Create a Pull Request
 
 ### Bug / Feature Request
+If there is a bug, open an issue here by including your issue with explanation.
+
+If you'd like to request a new function, feel free to do so by opening an issue here. Please include sample queries and their corresponding results.
 
 Built with
 ------
+* HTML5
+* CSS3
+* JQuery
 
 To-do
 ------
+AI to play against...
 
 Author
 ------
+<a href="https://github.com/Moayad93/">Moayad Alnuwaysir</a>
