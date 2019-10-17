@@ -1,13 +1,3 @@
-<!-- - explanations of the technologies used
-
-- the approach taken
-
-- installation instructions
-
-- unsolved problems
-
-- other useful information etc. -->
-
 Tic-Tac-Toe
 ======
 
@@ -42,8 +32,6 @@ To fix a bug or improve the game features, follow the next steps:
 ### Bug / Feature Request
 If there is a bug, open an issue <a href="https://github.com/Moayad93/tic-tac-toe/issues">here</a> by including your issue with explanation.
 
-If you'd like to request a new function, feel free to do so by opening an issue here. Please include sample queries and their corresponding results.
-
 Built with
 ------
 * HTML5
@@ -52,7 +40,7 @@ Built with
 
 To-do
 ------
-The game currently has just a multiplayer mode. So, if AI added to be played against it would make it better
+The game currently has a multiplayer mode. So, AI would be added to be played against to make the game better
 
 Author
 ------
