@@ -138,3 +138,7 @@ textarea:focus {
 /* ul > li:not(:last-child)::after {
   content: ",";
 } */
+
+html {
+  scroll-behavior: smooth;
+}
