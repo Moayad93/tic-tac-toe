@@ -62,7 +62,7 @@ header {
   width: 100%;
   padding: 1em;
   /* We want the header to have a static height,
-   it will always take up just as much space as it needs.  */
+   it will always take up just as much space as it needs  */
   /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
   flex: 0 0 auto;
 }
@@ -103,7 +103,7 @@ main {
   width: 100%;
   padding: 1em;
   /* By setting flex-grow to 1, the main content will take up all of the remaining space on the page.
-   The other elements have flex-grow: 0 and won't contest the free space. */
+   The other elements have flex-grow: 0 and won't contest the free space */
   /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
   flex: 1 0 auto;
 
@@ -170,7 +170,7 @@ footer {
   background-color: #212121;
   width: 100%;
   padding: 1em;
-  /* Like the header, the footer will have a static height - it shouldn't grow or shrink.  */
+  /* Like the header, the footer will have a static height - it shouldn't grow or shrink  */
   /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
   flex: 0 0 auto;
 }
@@ -217,25 +217,7 @@ footer {
     color: #FAFAFA !important;
   }
 
-/* MEDIA QUERIES */
-
-/* // Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) { ... }
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) and (max-width: 767.98px) { ... }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991.98px) { ... }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199.98px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... } */
-
-/* @media (max-width: 575.98px) { ... } */
-
+/* Media Queries */
 @media (max-width: 768px) {
 
   body, #wrapper {
